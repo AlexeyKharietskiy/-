@@ -3,9 +3,9 @@ from typing import List, Optional
 
 
 class Property:
-    def __init__(self):
-        self.id: int
-        self.owner: User
+    def __init__(self, user: User):
+        self.id: int = 0
+        self.owner: User = user
         self.location: str
         self.description: str
         self.pricePerNight: float
