@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+        }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .search-container {
+            background: white;
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+
+        }
+        .search-container h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+        .search-container form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .search-container select,
+        .search-container input,
+        .search-container button {
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+        .search-container button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #34495e;
+        }
+        .hero {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hero h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                Home
+                <a href="apartment_add.html">Add property</a>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <a href="login.html">Log out</a>
+                <a href="profile.html">Go to my profile</a>
+            </nav>
+        </div>
+    </header>
+    <div class="search-container">
+        <h2>Search for available apartments</h2>
+        <form>
+            <select>
+                <option value="" disabled selected>Location</option>
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+            </select>
+            <select>
+                <option value="" disabled selected>Number of people</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <input type="date" placeholder="Check In" value="2024-01-01">
+            <input type="date" placeholder="Check Out" value="2024-01-01">
+            <select>
+                <option value="" disabled selected>Coming with pets?</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <button type="button" onclick="window.location.href='search.html';">Search</button>
+        </form>
+    </div>
+    <div class="hero">
+        <h1>We Help People Find Their Perfect Home</h1>
+    </div>
+</body>
+</html>

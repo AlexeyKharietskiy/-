@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .profile-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .profile-container h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .profile-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .profile-container label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+        .profile-container input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .profile-container select {
+            width: 105.5%;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .profile-container button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .profile-container button:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Edit your profile</h1>
+        <img src="cat.png" alt="Profile Picture">
+        <form>
+            <label for="phone">Phone number</label>
+            <input type="text" id="phone" placeholder="+375375375375" value="+375375375375">
+
+            <label for="nationality">Nationality</label>
+            <select id="nationality">
+                <option value="Belarus" selected>Belarus</option>
+                <option value="Russia">Russia</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="Poland">Poland</option>
+            </select>
+
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" value="1970-01-01">
+
+            <button type="button" onclick="window.location.href='profile.html';">Edit profile</button>
+        </form>
+    </div>
+</body>
+</html>

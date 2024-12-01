@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Step 2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .signup-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .signup-container label {
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+        }
+        .signup-container input,
+        .signup-container select {
+            font-family: 'Poppins', sans-serif;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+        .signup-container input:focus,
+        .signup-container select:focus {
+            border-color: #3498db;
+        }
+        .signup-container button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .signup-container button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Just one more step...</h1>
+        <form>
+            <label for="nickname">Nickname</label>
+            <input type="text" id="nickname" placeholder="Enter your nickname" required>
+
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" placeholder="Enter your number" required>
+
+            <label for="nationality">Nationality</label>
+            <select id="nationality" required>
+                <option value="" disabled selected>Select team country</option>
+                <option value="belarus">Belarus</option>
+                <option value="russia">Russia</option>
+            </select>
+
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" value="1970-01-01" required>
+
+            <!-- Кнопка для перехода -->
+            <button type="button" onclick="window.location.href='sign_up_3.html';">Next step</button>
+        </form>
+    </div>
+</body>
+</html>

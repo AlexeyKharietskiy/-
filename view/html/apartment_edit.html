@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Apartment</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1200px;
+            position: relative;
+        }
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .form-header h1 {
+            font-size: 26px;
+            color: #2c3e50;
+        }
+        .form-header button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+            row-gap: 30px;
+        }
+        .form-grid input[type="text"],
+        .form-grid input[type="number"] {
+            padding: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 100%;
+        }
+        .form-grid label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .bills-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .bills-section input[type="number"] {
+            font-family: 'Poppins', sans-serif;
+            max-width: 150px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            font-family: 'Poppins', sans-serif;
+            margin-right: 8px;
+        }
+        .bathroom-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .checkbox-group-3-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .actions {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        .actions button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+        }
+        .delete-btn {
+            background: #e74c3c;
+            color: white;
+        }
+        .delete-btn:hover {
+            background: #c0392b;
+        }
+        .update-btn {
+            background: #2c3e50;
+            color: white;
+        }
+        .update-btn:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Edit Apartment</h1>
+            <button  type="button" onclick="window.location.href='profile.html';">&times;</button>
+        </div>
+        <form>
+            <div class="form-grid">
+                <div>
+                    <label for="title">Apartment Title</label>
+                    <input type="text" id="title" placeholder="Enter apartment title">
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Enter address">
+                </div>
+                <div>
+                    <label for="size">Size</label>
+                    <input type="number" id="size" placeholder="Enter size (m²)">
+                </div>
+                <div>
+                    <label for="distance">Distance from the center</label>
+                    <input type="number" id="distance" placeholder="Enter distance">
+                </div>
+                <div class="bills-section">
+                    <input type="checkbox" id="bills-included">
+                    <label for="bills-included">Bills included up to</label>
+                    <input type="number" placeholder="Enter amount">
+                </div>
+            </div>
+            <h3>Number of bathrooms</h3>
+            <div class="bathroom-section">
+                <label><input type="radio" name="bathrooms" value="1"> 1</label>
+                <label><input type="radio" name="bathrooms" value="2"> 2</label>
+                <label><input type="radio" name="bathrooms" value="3"> 3</label>
+            </div>
+            <h3>Bathroom Features</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox" checked> Toilet</label>
+                <label><input type="checkbox" checked> Shower</label>
+                <label><input type="checkbox" checked> Bath</label>
+                <label><input type="checkbox" checked> Sink</label>
+            </div>
+            <h3>Kitchen Features</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Microwave</label>
+                <label><input type="checkbox"> Oven</label>
+                <label><input type="checkbox"> Fridge</label>
+                <label><input type="checkbox"> Stove</label>
+            </div>
+            <h3>Living Room Features</h3>
+            <div class="checkbox-group-3-columns">
+                <label><input type="checkbox" checked> Wi-Fi</label>
+                <label><input type="checkbox" checked> Washing machine</label>
+                <label><input type="checkbox"> Unfurnished</label>
+                <label><input type="checkbox" checked> Central heating</label>
+                <label><input type="checkbox" checked> Accessibility needs</label>
+                <label><input type="checkbox"> Terrace</label>
+                <label><input type="checkbox" checked> Air conditioning</label>
+                <label><input type="checkbox" checked> Free parking</label>
+                <label><input type="checkbox"> Garden</label>
+            </div>
+            <div class="actions">
+                <button type="button" class="delete-btn" onclick="window.location.href='delete_popup.html';">Delete</button>
+                <button type="button" class="update-btn" onclick="window.location.href='profile.html';">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

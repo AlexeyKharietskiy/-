@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .left-column {
+            flex: 3;
+        }
+        .right-column {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .property-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .property-info {
+            margin-top: 20px;
+        }
+        .property-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .property-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .property-info .tags span {
+            display: inline-block;
+            background: #f0f0f0;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            font-size: 14px;
+        }
+        .booking-request {
+            margin-top: 20px;
+        }
+        .booking-request input,
+        .booking-request button {
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .booking-request button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .similar-properties {
+            margin-top: 40px;
+        }
+        .similar-properties h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .property-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .property-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .property-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .property-card h3 {
+            font-size: 16px;
+            margin: 10px;
+        }
+        .property-card p {
+            font-size: 14px;
+            margin: 0 10px;
+            color: #555;
+        }
+        .property-card .tags {
+            margin: 10px;
+        }
+        .property-card .tags span {
+            display: inline-block;
+            background: #f0f0f0;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            font-size: 12px;
+        }
+        .find-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .find-more button {
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html">Home</a>
+        <a href="login.html">Log out</a>
+    </header>
+    <div class="content">
+        <div class="left-column">
+            <div class="property-image">
+                <img src="cat.png" alt="Property">
+            </div>
+            <div class="property-info">
+                <h1>Lorem Ipsum</h1>
+                <p><strong>$450</strong> / Bills included</p>
+                <div class="tags">
+                    <span>4 bedrooms</span>
+                    <span>150 m²</span>
+                    <span>Private Bathroom</span>
+                    <span>Furnished</span>
+                </div>
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu fermentum vitae id dui gravida lectus.</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <h2>Booking Request</h2>
+            <form class="booking-request">
+                <label for="check-in">Check In</label>
+                <input type="date" id="check-in" value="2024-01-01">
+                <label for="check-out">Check Out</label>
+                <input type="date" id="check-out" value="2024-01-01">
+                <button type="button" onclick="window.location.href='booking.html';">Check Booking</button>
+            </form>
+        </div>
+    </div>
+    <div class="similar-properties">
+        <h2>Similar Properties in Lisbon</h2>
+        <div class="property-cards">
+            <a href="prebooking.html" class="property-card">
+                <img src="cat.png" alt="Property">
+                <h3>Lorem Ipsum</h3>
+                <p>$700/month</p>
+                <div class="tags">
+                    <span>Bills included</span>
+                    <span>ELL Verified</span>
+                </div>
+            </a>
+            <a href="prebooking.html" class="property-card">
+                <img src="cat.png" alt="Property">
+                <h3>Lorem Ipsum</h3>
+                <p>$700/month</p>
+                <div class="tags">
+                    <span>Bills included</span>
+                    <span>ELL Verified</span>
+                </div>
+            </a>
+            <a href="prebooking.html" class="property-card">
+                <img src="cat.png" alt="Property">
+                <h3>Lorem Ipsum</h3>
+                <p>$700/month</p>
+                <div class="tags">
+                    <span>Bills included</span>
+                    <span>ELL Verified</span>
+                </div>
+            </a>
+            <a href="prebooking.html" class="property-card">
+                <img src="cat.png" alt="Property">
+                <h3>Lorem Ipsum</h3>
+                <p>$700/month</p>
+                <div class="tags">
+                    <span>Bills included</span>
+                    <span>ELL Verified</span>
+                </div>
+            </a>
+        </div>
+        <div class="find-more">
+            <button type="button" onclick="window.location.href='search.html';">Find More Rooms</button>
+        </div>
+    </div>
+</body>
+</html>

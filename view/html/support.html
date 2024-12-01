@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .popup-container {
+            background: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: left;
+        }
+        .popup-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .popup-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .popup-header .user-info {
+            font-family: 'Poppins', sans-serif;
+            margin-left: 10px;
+            flex: 1;
+        }
+        .popup-header .user-info h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .popup-header .user-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
+        .popup-header button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #777;
+        }
+        .popup-body {
+            margin-top: 20px;
+        }
+        .popup-body p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .popup-body textarea {
+            font-family: 'Poppins', sans-serif;
+            width: 95%;
+            height: 100px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+        .popup-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        .popup-footer button {
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+        .cancel-btn {
+            background: #f1f1f1;
+            color: #333;
+        }
+        .cancel-btn:hover {
+            background: #e1e1e1;
+        }
+        .send-btn {
+            background: #e74c3c;
+            color: white;
+        }
+        .send-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <div class="popup-header">
+            <div class="user-details">
+                <img src="cat.png" alt="User Picture">
+                <div class="user-info">
+                    <h4>Jane Doe</h4>
+                    <p>jane@doe.com</p>
+                </div>
+            </div>
+            <button type="button" onclick="window.location.href='profile.html';">&times;</button>
+        </div>
+        <div class="popup-body">
+            <p>Do you want to contact the support team?</p>
+            <p>Please describe your problem</p>
+            <textarea placeholder="Enter a description..."></textarea>
+        </div>
+        <div class="popup-footer">
+            <button type="button" onclick="window.location.href='profile.html';" class="cancel-btn">Cancel</button>
+            <button type="button" onclick="window.location.href='profile.html';" class="send-btn">Send</button>
+        </div>
+    </div>
+</body>
+</html>
